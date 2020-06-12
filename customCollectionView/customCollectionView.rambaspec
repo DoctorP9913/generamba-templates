@@ -1,0 +1,19 @@
+# Template information section
+name: "CustomCollectionView"
+summary: "Custom UICollectionView"
+author: "Peter Papajohn"
+version: "1.0"
+license: "MIT"
+
+# The declarations for code files
+code_files:
+# CollectionView
+- {name: CollectionView/CollectionView.swift, path: Code/CollectionView/CollectionView.swift.liquid}
+- {name: CollectionView/CollectionView+Extensions.swift, path: Code/CollectionView/CollectionView+Extensions.swift.liquid}
+
+# CollectionView Cell
+- {name: CollectionView/CollectionViewCell/CollectionViewCell.swift, path: Code/CollectionView/CollectionViewCell/CollectionViewCell.swift.liquid}
+- {name: CollectionView/CollectionViewCell/CollectionViewCell.xib, path: Code/CollectionView/CollectionViewCell/CollectionViewCell.xib.liquid}
+
+# Template dependencies
+dependencies:
