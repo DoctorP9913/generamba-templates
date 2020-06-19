@@ -41,6 +41,7 @@ class {{ prefix }}{{ module_info.name }}ViewController: UIViewController {
 		self.viewModel?.mainTableViewDataArray.addObserver { [weak self] (mainTableViewDataArray, nil) in
 			self?.tableView.mainTableViewDataArray = mainTableViewDataArray
 			self?.tableView.reloadData()
-	}
+	    }
 
+    }
 }
