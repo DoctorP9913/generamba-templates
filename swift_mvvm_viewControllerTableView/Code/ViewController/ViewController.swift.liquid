@@ -12,7 +12,7 @@ class {{ prefix }}{{ module_info.name }}ViewController: UIViewController {
 
 	//MARK: - IBProperties
 
-    @IBOutlet var tableView: UITableView! {
+    @IBOutlet var tableView: {{ prefix }}{{ module_info.name }}TableView! {
         didSet {
             self.tableView.register(UINib(nibName: "{{ prefix }}{{ module_info.name }}TableViewCell", bundle: nil), forCellReuseIdentifier: "{{ prefix }}{{ module_info.name }}TableViewCellIdentifier")
             self.tableView.delegate = self
@@ -41,7 +41,6 @@ class {{ prefix }}{{ module_info.name }}ViewController: UIViewController {
 		self.viewModel?.mainTableViewDataArray.addObserver { [weak self] (mainTableViewDataArray, nil) in
 			self?.tableView.mainTableViewDataArray = mainTableViewDataArray
 			self?.tableView.reloadData()
-	    }
+	}
 
-    }
 }

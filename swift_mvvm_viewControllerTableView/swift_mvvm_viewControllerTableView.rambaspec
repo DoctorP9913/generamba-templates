@@ -20,6 +20,10 @@ code_files:
 - {name: ViewController/ViewController+TableView/ViewController+DataSource.swift, path: Code/ViewController/ViewController+TableView/ViewController+DataSource.swift.liquid}
 - {name: ViewController/ViewController+TableView/ViewController+Delegate.swift, path: Code/ViewController/ViewController+TableView/ViewController+Delegate.swift.liquid}
 
+# TableViewCell
+- {name: ViewController/ViewController+TableView/TableViewCell/TableViewCell.swift, path: Code/ViewController/ViewController+TableView/TableViewCell/TableViewCell.swift.liquid}
+- {name: ViewController/ViewController+TableView/TableViewCell/TableViewCell.xib, path: Code/ViewController/ViewController+TableView/TableViewCell/TableViewCell.xib.liquid}
+
 # The declarations for test files
 test_files:
 #- {name: Service/ServiceTests.m, path: Tests/Service/service_tests.m.liquid}

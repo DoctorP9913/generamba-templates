@@ -11,7 +11,7 @@ import UIKit
 extension {{ prefix }}{{ module_info.name }}ViewController: UITableViewDataSource {
 	
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.viewModel?.mainTableViewDataArray.count ?? 0
+        return self.viewModel?.mainTableViewDataArray.value.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
