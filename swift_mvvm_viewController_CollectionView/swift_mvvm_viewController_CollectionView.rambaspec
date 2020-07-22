@@ -1,0 +1,33 @@
+# Template information section
+name: swift_mvvm_viewController_CollectionView
+summary: UIViewController(MVVM) with UICollectionView
+author: Peter Papajohn
+version: 1.0.0
+license: MIT
+
+# The declarations for code files
+code_files:
+
+# Storyboard + View Controller (no swift file)
+- {name: .storyboard, path: Code/ViewController.storyboard.liquid}
+
+# View Controller (swift file) + View Model
+- {name: View/ViewController.swift, path: Code/View/ViewController.swift.liquid}
+- {name: ViewModel/ViewModel.swift, path: Code/ViewModel/ViewModel.swift.liquid}
+
+# CollectionView
+- {name: View/CollectionView/CollectionView.swift, path: Code/View/CollectionView/CollectionView.swift.liquid}
+- {name: View/CollectionView/CollectionViewExtensions/CollectionView+DataSource.swift, path: Code/View/CollectionView/CollectionViewExtensions/CollectionView+DataSource.swift.liquid}
+- {name: View/CollectionView/CollectionViewExtensions/CollectionView+Delegate.swift, path: Code/View/CollectionView/CollectionViewExtensions/CollectionView+Delegate.swift.liquid}
+- {name: View/CollectionView/CollectionViewExtensions/CollectionView+FlowLayout.swift, path: Code/View/CollectionView/CollectionViewExtensions/CollectionView+FlowLayout.swift.liquid}
+
+# CollectionView Cell (swift file + xib)
+- {name: View/CollectionView/Cell/CollectionViewCell.swift, path: Code/View/CollectionView/Cell/CollectionViewCell.swift.liquid}
+- {name: View/CollectionView/Cell/CollectionViewCell.xib, path: Code/View/CollectionView/Cell/CollectionViewCell.xib.liquid}
+
+# The declarations for test files
+test_files:
+#- {name: Service/ServiceTests.m, path: Tests/Service/service_tests.m.liquid}
+
+# Template dependencies
+dependencies:
