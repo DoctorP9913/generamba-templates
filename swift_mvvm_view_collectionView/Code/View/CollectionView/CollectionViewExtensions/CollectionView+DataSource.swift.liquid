@@ -1,0 +1,32 @@
+//
+//  {{ prefix }}{{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import UIKit
+
+extension {{ prefix }}{{ module_info.name }}CollectionView: UICollectionViewDataSource {
+    
+    //MARK: - Sections
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    //MARK: - Rows
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.objectArray.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "{{ prefix }}{{ module_info.name }}CollectionViewCellIdentifier", for: indexPath) as? {{ prefix }}{{ module_info.name }}CollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        cell.setup()
+        return cell
+    }
+}

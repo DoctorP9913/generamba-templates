@@ -1,0 +1,30 @@
+//
+//  {{ prefix }}{{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import UIKit
+
+extension {{ prefix }}{{ module_info.name }}CollectionView: UICollectionViewDelegate {
+    
+    //MARK: - Select
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let selectedCell = collectionView.cellForItem(at: indexPath) as? {{ prefix }}{{ module_info.name }}CollectionViewCell else {
+            return
+        }
+        self.collectionViewProtocol?.didSelect{{ prefix }}{{ module_info.name }}Cell(cell: selectedCell)
+    }
+    
+    //MARK: - Deselect
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        guard let deselectedCell = collectionView.cellForItem(at: indexPath) as? {{ prefix }}{{ module_info.name }}CollectionViewCell else {
+            return
+        }
+        self.collectionViewProtocol?.didDeselect{{ prefix }}{{ module_info.name }}Cell(cell: deselectedCell)
+    }
+}

@@ -1,0 +1,21 @@
+//
+//  {{ prefix }}{{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import Foundation
+
+extension {{ prefix }}{{ module_info.name }}View: {{ prefix }}{{ module_info.name }}CollectionViewProtocol {
+    
+    func didSelect{{ prefix }}{{ module_info.name }}Cell(cell: {{ prefix }}{{ module_info.name }}CollectionViewCell) {
+        self.viewProtocol?.didSelect{{ prefix }}{{ module_info.name }}Cell(cell: cell)
+    }
+    
+    func didDeselect{{ prefix }}{{ module_info.name }}Cell(cell: {{ prefix }}{{ module_info.name }}CollectionViewCell) {
+        self.viewProtocol?.didDeselect{{ prefix }}{{ module_info.name }}Cell(cell: cell)
+    }
+    
+}

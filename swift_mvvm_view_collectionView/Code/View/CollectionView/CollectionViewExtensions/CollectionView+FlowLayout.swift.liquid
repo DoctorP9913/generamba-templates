@@ -1,0 +1,31 @@
+//
+//  {{ prefix }}{{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import UIKit
+
+extension {{ prefix }}{{ module_info.name }}CollectionView: UICollectionViewDelegateFlowLayout {
+    
+    //MARK: - Header
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return collectionView.frame.size
+    }
+    
+    //MARK: - Cell
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let aspectSquareSize = collectionView.frame.height
+        return CGSize(width: aspectSquareSize, height: aspectSquareSize)
+    }
+    
+    //MARK: - Footer
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        return collectionView.frame.size
+    }
+}
