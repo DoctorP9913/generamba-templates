@@ -8,8 +8,9 @@ license: MIT
 # The declarations for code files
 code_files:
 
-# Custom View (xib + swift file)
+# Custom View (xib + swift file + protocol)
 - {name: View/View.swift, path: Code/View/View.swift.liquid}
+- {name: View/View+Protocol.swift, path: Code/View/View+Protocol.swift.liquid}
 - {name: View/View.xib, path: Code/View/View.xib.liquid}
 
 # TableView

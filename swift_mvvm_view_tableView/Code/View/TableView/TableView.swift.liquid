@@ -8,11 +8,17 @@
 
 import UIKit
 
+protocol {{ prefix }}{{ module_info.name }}TableViewProtocol: AnyObject {
+    func didSelect{{ prefix }}{{ module_info.name }}Cell(cell: {{ prefix }}{{ module_info.name }}TableViewCell)
+    func didDeselect{{ prefix }}{{ module_info.name }}Cell(cell: {{ prefix }}{{ module_info.name }}TableViewCell)
+}
+
 class {{ prefix }}{{ module_info.name }}TableView: UITableView {
 
     //MARK: - Properties
     
     var dataArray: [NSObject] = []
+    var tableViewProtocol: {{ prefix }}{{ module_info.name }}TableViewProtocol?
     
     //MARK: - Life Cycle
     

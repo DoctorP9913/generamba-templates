@@ -8,20 +8,26 @@
 
 import UIKit
 
+protocol {{ prefix }}{{ module_info.name }}ViewProtocol: AnyObject {
+    func didSelect{{ prefix }}{{ module_info.name }}Cell(cell: {{ prefix }}{{ module_info.name }}TableViewCell)
+    func didDeselect{{ prefix }}{{ module_info.name }}Cell(cell: {{ prefix }}{{ module_info.name }}TableViewCell)
+}
+
 class {{ prefix }}{{ module_info.name }}View: UIView {
     
     //MARK: - IBProperties
     
     @IBOutlet var contentView: UIView!
-    @IBOutlet var tableView: UITableView! {
+    @IBOutlet var tableView: {{ prefix }}{{ module_info.name }}TableView! {
         didSet {
-            
+            self.tableView.register(UINib(nibName: "{{ prefix }}{{ module_info.name }}ΤableViewCell", bundle: nil), forCellReuseIdentifier: "{{ prefix }}{{ module_info.name }}ΤableViewCellIdentifier")
+            self.tableView.tableViewProtocol = self
         }
     }
     
     //MARK: - Properties
     
-    
+    var viewProtocol: {{ prefix }}{{ module_info.name }}ViewProtocol?
     
     //MARK: - Initializers
     
